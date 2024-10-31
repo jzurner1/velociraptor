@@ -27,11 +27,11 @@ const (
 )
 
 var (
-	pleaseEnrollError = errors.New("Please Enrol")
+	pleaseEnrollError = errors.New("Please Enroll")
 	conflictError     = errors.New("Another Client connection exists. " +
 		"Only a single instance of the client is " +
 		"allowed to connect at the same time.")
-	notConnectedError = errors.New("WS Socket is not conencted")
+	notConnectedError = errors.New("WS Socket is not connected")
 
 	currentWSConnections = promauto.NewGauge(prometheus.GaugeOpts{
 		Name: "client_comms_current_ws_connections",
